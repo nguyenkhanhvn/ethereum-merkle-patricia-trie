@@ -118,7 +118,6 @@ func NewProofDB() *ProofDB {
 func (w *ProofDB) Put(key []byte, value []byte) error {
 	keyS := hex.EncodeToString(key)
 	w.kv[keyS] = value
-	fmt.Printf("put key: %x, value: %x\n", keyS, value)
 	return nil
 }
 
